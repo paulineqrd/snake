@@ -13,7 +13,12 @@ FetchContent_Declare(
 # Clone terminal_ctrl puis ajoute son CMakeLists.txt au projet
 FetchContent_MakeAvailable(terminal_ctrl)
 
-add_executable(snake src/main.cpp)
+add_executable(snake
+    src/main.cpp
+    src/game.cpp
+    src/render.cpp
+)
+
 target_compile_features(snake PRIVATE cxx_std_20)
 
 # terminal_ctrl
